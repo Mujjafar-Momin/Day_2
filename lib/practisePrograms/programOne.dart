@@ -247,7 +247,6 @@ if (amount<0){
 //classs, objects and constructor
 void main() {
 
-// var st=Student(1,"rahul");
 var st=Student(1,"Rahul");
 print("Id: ${st.id} Name: ${st.name}");
 print("");
