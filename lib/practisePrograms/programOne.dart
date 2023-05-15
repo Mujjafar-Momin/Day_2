@@ -274,3 +274,26 @@ class Student{
   }
 }
 */
+//getters and setters
+void main(){
+
+  print("");
+  var st=Student();
+
+  st.setName="Rahul Gandhi";
+  print(st.getName);
+
+ st.percentage=438.0;
+ print(st.percentage);
+}
+class Student{
+    String? _name;
+    double? _percent;
+
+    void set setName(name)=>this._name=name;
+    String get getName=>_name!;
+
+    void set percentage(double mark)=>_percent=(mark/500)*100;
+    double get percentage=>_percent!;
+
+}
