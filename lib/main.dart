@@ -1,9 +1,9 @@
+import 'package:demo_project/Pages/Example.dart';
 import 'package:demo_project/Pages/Login.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() =>runApp(const MyApp());
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -61,3 +61,5 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+
