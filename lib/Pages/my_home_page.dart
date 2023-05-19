@@ -1,3 +1,7 @@
+import 'package:demo_project/SubPages/Home.dart';
+import 'package:demo_project/SubPages/Profile.dart';
+import 'package:demo_project/Pages/login_page.dart';
+import 'package:demo_project/Pages/sign_up.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -12,9 +16,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var count = 0;
   int currentPage = 0;
-
+ List<Widget> pages=const[
+   Home(),
+   SearchBar(),
+   SignUp(),
+   Profile()
+ ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Navigator.popUntil(
                   context, (Route<dynamic> route) => route.isFirst);
             },
-            icon: Icon(Icons.arrow_back_ios),
+            icon: const Icon(Icons.arrow_back_ios),
           ),
           backgroundColor: Theme
               .of(context)
@@ -37,30 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       icon: const FaIcon(
           FontAwesomeIcons.facebookMessenger, size: 32, color: Colors.purple))],
     ),
-    body: Center(
-    child: Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-    Text(
-    "count: $count",
-    style: const TextStyle(fontSize: 25),
-    ),
-    const SizedBox(
-    height: 20,
-    ),
-    ElevatedButton(
-    style: ElevatedButton.styleFrom(
-    textStyle: const TextStyle(fontSize: 25)),
-    onPressed: () {
-    setState(() {
-    count++;
-    print(count);
-    });
-    },
-    child: const Text("Increamenet Count"))
-    ],
-    ),
-    ),
+    body: pages[currentPage],
     bottomNavigationBar: NavigationBar(
     destinations: const [
     NavigationDestination(icon: Icon(Icons.home), label: "Home"),

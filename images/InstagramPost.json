@@ -1,0 +1,96 @@
+{
+  "status": 200,
+  "message": "Success",
+  "posts": [
+    {
+      "user": {
+        "username": "sarahsmith",
+        "profile_picture_url": "https://example.com/images/profile/sarahsmith.jpg",
+        "full_name": "Sarah Smith"
+      },
+      "image_url": "https://example.com/images/post1.jpg",
+      "likes": 500
+    },
+    {
+      "user": {
+        "username": "johndoe",
+        "profile_picture_url": "https://example.com/images/profile/johndoe.jpg",
+        "full_name": "John Doe"
+      },
+      "image_url": "https://example.com/images/post2.jpg",
+      "likes": 300
+    },
+    {
+      "user": {
+        "username": "janedoe",
+        "profile_picture_url": "https://example.com/images/profile/janedoe.jpg",
+        "full_name": "Jane Doe"
+      },
+      "image_url": "https://example.com/images/post3.jpg",
+      "likes": 800
+    },
+    {
+      "user": {
+        "username": "mikesmith",
+        "profile_picture_url": "https://example.com/images/profile/mikesmith.jpg",
+        "full_name": "Mike Smith"
+      },
+      "image_url": "https://example.com/images/post4.jpg",
+      "likes": 200
+    },
+    {
+      "user": {
+        "username": "emilyjones",
+        "profile_picture_url": "https://example.com/images/profile/emilyjones.jpg",
+        "full_name": "Emily Jones"
+      },
+      "image_url": "https://example.com/images/post5.jpg",
+      "likes": 450
+    },
+    {
+      "user": {
+        "username": "davidbrown",
+        "profile_picture_url": "https://example.com/images/profile/davidbrown.jpg",
+        "full_name": "David Brown"
+      },
+      "image_url": "https://example.com/images/post6.jpg",
+      "likes": 600
+    },
+    {
+      "user": {
+        "username": "laurawilliams",
+        "profile_picture_url": "https://example.com/images/profile/laurawilliams.jpg",
+        "full_name": "Laura Williams"
+      },
+      "image_url": "https://example.com/images/post7.jpg",
+      "likes": 150
+    },
+    {
+      "user": {
+        "username": "alexturner",
+        "profile_picture_url": "https://example.com/images/profile/alexturner.jpg",
+        "full_name": "Alex Turner"
+      },
+      "image_url": "https://example.com/images/post8.jpg",
+      "likes": 700
+    },
+    {
+      "user": {
+        "username": "oliviamiller",
+        "profile_picture_url": "https://example.com/images/profile/oliviamiller.jpg",
+        "full_name": "Olivia Miller"
+      },
+      "image_url": "https://example.com/images/post9.jpg",
+      "likes": 400
+    },
+    {
+      "user": {
+        "username": "maxharris",
+        "profile_picture_url": "https://example.com/images/profile/maxharris.jpg",
+        "full_name": "Max Harris"
+      },
+      "image_url": "https://example.com/images/post10.jpg",
+      "likes": 250
+    }
+  ]
+}
