@@ -1,7 +1,9 @@
-import 'package:demo_project/SubPages/Home.dart';
+import 'package:demo_project/SubPages/SearchPage/Home.dart';
 import 'package:demo_project/SubPages/Profile.dart';
 import 'package:demo_project/Pages/login_page.dart';
 import 'package:demo_project/Pages/sign_up.dart';
+import 'package:demo_project/SubPages/SearchPage/search_bar.dart';
+import 'package:demo_project/SubPages/SearchPage/search_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -19,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int currentPage = 0;
  List<Widget> pages=const[
    Home(),
-   SearchBar(),
+   SearchPage(),
    SignUp(),
    Profile()
  ];

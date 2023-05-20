@@ -2,6 +2,7 @@
 import 'package:demo_project/SubPages/ListViewExample.dart';
 import 'package:demo_project/Pages/login_page.dart';
 import 'package:demo_project/Pages/my_home_page.dart';
+import 'package:demo_project/SubPages/SearchPage/Home.dart';
 // import 'package:demo_project/Pages/login_page.dart';
 // import 'package:demo_project/Pages/my_home_page.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: MyHomePage(title: 'Home'),
     );
   }
 }
