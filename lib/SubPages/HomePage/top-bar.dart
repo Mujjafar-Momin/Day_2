@@ -48,6 +48,7 @@ class EventCategoryItem extends StatelessWidget {
         color: isActive ? Colors.purple[300] : Colors.transparent,
       ),
       child: InkWell(
+        onTap: (){},
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: Center(
