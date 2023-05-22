@@ -14,10 +14,13 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        MySearchBar(),
-       Expanded(child: SizedBox(
-           height: MediaQuery.of(context).size.height * 1, child: GridFeed()),
-       )],
+        const MySearchBar(),
+        Expanded(
+          child: SizedBox(
+              height: MediaQuery.of(context).size.height * 1,
+              child: const GridFeed()),
+        )
+      ],
     );
   }
 }

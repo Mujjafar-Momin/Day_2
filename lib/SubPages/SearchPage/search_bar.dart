@@ -15,7 +15,7 @@ class MySearchBar extends StatefulWidget {
             padding: const EdgeInsets.fromLTRB(12, 8, 12, 8),
             child: DecoratedBox(
               decoration: BoxDecoration(
-                color: Color(0x0F000000),
+                color: const Color(0x0F000000),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: TextFormField(
@@ -28,9 +28,9 @@ class MySearchBar extends StatefulWidget {
                     //alignLabelWithHint: true,
                     hintText: 'Search profile',
                     border: InputBorder.none,
-                    hintStyle: TextStyle(color: Colors.black26),
+                    hintStyle: const TextStyle(color: Colors.black26),
                     prefixIconConstraints:
-                        BoxConstraints.tight(Size.fromRadius(20.0))),
+                        BoxConstraints.tight(const Size.fromRadius(20.0))),
               ),
             ),
           ),

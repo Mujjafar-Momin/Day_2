@@ -1,5 +1,4 @@
 import 'package:demo_project/Pages/my_home_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {
