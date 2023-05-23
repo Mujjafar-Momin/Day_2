@@ -1,6 +1,6 @@
 // import 'dart:convert';
 //
-// import 'package:demo_project/Models/Post.dart';
+// import 'package:demo_project/Models/post.dart';
 // import 'package:flutter/cupertino.dart';
 // import 'package:flutter/material.dart';
 // import 'package:http/http.dart' as http;

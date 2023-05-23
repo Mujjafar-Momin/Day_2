@@ -1,6 +1,6 @@
-import 'package:demo_project/SubPages/Profile/Profile.dart';
-import 'package:demo_project/SubPages/SearchPage/Home.dart';
-import 'package:demo_project/SubPages/Liked/Liked.dart';
+import 'package:demo_project/SubPages/Profile/profile.dart';
+import 'package:demo_project/SubPages/SearchPage/home.dart';
+import 'package:demo_project/SubPages/Liked/liked.dart';
 import 'package:demo_project/SubPages/SearchPage/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

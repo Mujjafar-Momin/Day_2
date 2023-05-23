@@ -1,5 +1,5 @@
-import 'package:demo_project/SubPages/Profile/About.dart';
-import 'package:demo_project/SubPages/Profile/MidProfile.dart';
+import 'package:demo_project/SubPages/Profile/about.dart';
+import 'package:demo_project/SubPages/Profile/mid_profile.dart';
 import 'package:flutter/material.dart';
 
 class Profile extends StatelessWidget {
