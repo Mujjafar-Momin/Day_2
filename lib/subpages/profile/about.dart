@@ -40,7 +40,8 @@ class About extends StatelessWidget {
                   'Widget customization and creation Responsive app design '
                   'and layout Testing and debugging Version control with Git'
                   ' Agile software development methodologies Problem-solving '
-                  'and critical thinking')
+                  'and critical thinking'),
+              SizedBox(height: 30,)
             ],
           ),
         ),

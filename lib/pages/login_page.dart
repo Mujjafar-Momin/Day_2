@@ -1,6 +1,5 @@
 import 'package:demo_project/Pages/my_home_page.dart';
 import 'package:demo_project/Pages/sign_up.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -11,13 +10,10 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final _formfield = GlobalKey<FormState>();
+  final _formField = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passController = TextEditingController();
   bool passToggle = true;
-
-  // bool emailValidate=RegExp("");
-  // bool passValidate=RegExp("");
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 60),
         child: Form(
-          key: _formfield,
+          key: _formField,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -59,6 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                   } else if (!emailValid) {
                     return "Enter Valid Email";
                   }
+                  return null;
                 },
               ),
               const SizedBox(height: 20),
@@ -90,8 +87,23 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(height: 60),
               InkWell(
                 onTap: () {
-                  if (_formfield.currentState!.validate()) {
-                    print("Success");
+                  if (_formField.currentState!.validate()) {
+                    final snackBar = SnackBar(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12)),
+                      duration: const Duration(seconds: 2),
+                      backgroundColor: Colors.black,
+                      behavior: SnackBarBehavior.floating,
+                      action: SnackBarAction(
+                          label: "undo",
+                          onPressed: () {},
+                          textColor: Colors.white),
+                      content: const Text(
+                        'Logged In Successfully..!',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (BuildContext context) {
                       return const MyHomePage(title: "Home");
@@ -134,7 +146,7 @@ class _LoginPageState extends State<LoginPage> {
                     },
                     child: Container(
                       height: 50,
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                           color: Colors.indigo,
                           borderRadius: BorderRadius.circular(5)),

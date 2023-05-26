@@ -8,19 +8,23 @@ class TopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 40,
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: listCategory.length,
-          itemBuilder: (context, index) {
-            return EventCategoryItem(
-              text: listCategory[index],
-              isActive: listCategory[index] == activeCategory,
-              isFirst: index==0,
-              isLast: index == listCategory.length - 1,
-            );
-          }),
+    return Column(
+      children: [
+        SizedBox(
+          height: 40,
+          child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: listCategory.length,
+              itemBuilder: (context, index) {
+                return EventCategoryItem(
+                  text: listCategory[index],
+                  isActive: listCategory[index] == activeCategory,
+                  isFirst: index==0,
+                  isLast: index == listCategory.length - 1,
+                );
+              }),
+        ),
+      ],
     );
   }
 }
