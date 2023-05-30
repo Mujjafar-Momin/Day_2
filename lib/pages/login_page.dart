@@ -1,6 +1,8 @@
 import 'package:demo_project/Pages/my_home_page.dart';
 import 'package:demo_project/Pages/sign_up.dart';
+import 'package:demo_project/pages/splash_page.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -86,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               const SizedBox(height: 60),
               InkWell(
-                onTap: () {
+                onTap: () async {
                   if (_formField.currentState!.validate()) {
                     final snackBar = SnackBar(
                       shape: RoundedRectangleBorder(
@@ -104,10 +106,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     );
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return const MyHomePage(title: "Home");
-                    }));
+                    navigateToHome();
                     emailController.clear();
                     passController.clear();
                   }
@@ -168,5 +167,16 @@ class _LoginPageState extends State<LoginPage> {
         ),
       )),
     );
+  }
+
+  void navigateToHome() async{
+    var sharedpref=await SharedPreferences.getInstance();
+    sharedpref.setBool(SplashPageState.KEYLOGIN,true);
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context)
+    =>
+    MyHomePage(title: "Home"))
+    );
+
   }
 }
