@@ -169,14 +169,13 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  void navigateToHome() async{
-    var sharedpref=await SharedPreferences.getInstance();
-    sharedpref.setBool(SplashPageState.KEYLOGIN,true);
+  void navigateToHome() async {
+    var sharedpref = await SharedPreferences.getInstance();
+    sharedpref.setBool(SplashPageState.KEYLOGIN, true);
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context)
-    =>
-    MyHomePage(title: "Home"))
-    );
-
+        context,
+        MaterialPageRoute(
+          builder: (context) => MyHomePage(title: "Home"),
+        ),);
   }
 }
